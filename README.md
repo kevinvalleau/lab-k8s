@@ -2,7 +2,7 @@
 Dépôt de fichiers laboratoires pour kubernetes
 
 
-# Déploiement sur un playground docker (PWD ou Katacoda)
+# Déploiement sur un playground docker (Katacoda car les nodes PWD n'ont pas assez d'espace disque provisionné)
 
 Télécharger et installer kind : 
 
@@ -20,3 +20,12 @@ par exemple :
 curl https://raw.githubusercontent.com/kevinvalleau/lab-k8s/master/workload-stateful-mysql/mysql-statefulset.yaml > mysql-statefulset.yaml
 Cela va créer le fichier en local et ensuite on peut lancer : 
 kubectl apply -f mysql-statefulset.yaml
+
+
+sinon si https://www.katacoda.com/courses/kubernetes/playground fonctionne, s'en servir.
+
+curl https://raw.githubusercontent.com/kevinvalleau/lab-k8s/master/workload-stateful-mysql/cm.yaml > cm.yaml
+curl https://raw.githubusercontent.com/kevinvalleau/lab-k8s/master/workload-stateful-mysql/headless-svc.yaml > headless-svc.yaml
+curl https://raw.githubusercontent.com/kevinvalleau/lab-k8s/master/workload-stateful-mysql/mysql-svc.yaml > mysql-svc.yaml
+curl https://raw.githubusercontent.com/kevinvalleau/lab-k8s/master/workload-stateful-mysql/mysql-statefulset.yaml > mysql-statefulset.yaml
+
