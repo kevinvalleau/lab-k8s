@@ -105,7 +105,7 @@ spec:
                 set -ex
                 cd /var/lib/mysql
                 # Determine binlog position of cloned data, if any.
-                if [[ -f xtrabackup_slave_info && "x$(<xtrabackup_slave_info)" != "x"]]; then
+                if [[ -f xtrabackup_slave_info && "x$(<xtrabackup_slave_info)" != "x" ]]; then
                 # XtraBackup already generated a partial "CHANGE MASTER TO" query
                 # because we're cloning from an existing slave. (Need to remove the tailing semicolon!)
                   cat xtrabackup_slave_info | sed -E 's/;$//g' > change_master_to.sql.in
