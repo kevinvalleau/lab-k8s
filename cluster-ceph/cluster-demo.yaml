@@ -9,6 +9,8 @@ spec:
     image: ceph/ceph:v14.2.2-20190826
   dataDirHostPath: /var/lib/rook
   mon:
+    # Mettre à 3 pour l'infonuagique genre cluster kubernetes sur Azure
+    # sinon 1 manager 1 cpus 1536M 40Gi et un worker 2cpus 2048M 40Gi
     count: 1
   dashboard:
     enabled: true
