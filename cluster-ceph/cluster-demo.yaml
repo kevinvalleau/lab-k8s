@@ -9,7 +9,7 @@ spec:
     image: ceph/ceph:v14.2.2-20190826
   dataDirHostPath: /var/lib/rook
   mon:
-    count: 1
+    count: 3
   dashboard:
     enabled: true
   storage:
